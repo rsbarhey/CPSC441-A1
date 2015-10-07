@@ -19,6 +19,7 @@ public class UrlParser
 			try
 			{
 				port = Integer.parseInt(hostName.substring(hostName.indexOf(':')+ 1));
+				hostName = hostName.substring(0, hostName.indexOf(':'));
 			}
 			
 			catch (NumberFormatException e)
@@ -26,9 +27,9 @@ public class UrlParser
 				throw new UrlCacheException();
 			}
 		}
-		System.out.println("Hostname: " + hostName);
-		System.out.println("Path: " + path);
-		System.out.printf("Port number: %d \n", port);
+		//System.out.println("Hostname: " + hostName);
+		//System.out.println("Path: " + path);
+		//System.out.printf("Port number: %d \n", port);
 	}
 	
 	public String GetHostName()
